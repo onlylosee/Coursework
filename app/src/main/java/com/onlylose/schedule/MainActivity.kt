@@ -1,9 +1,13 @@
 package com.onlylose.schedule
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -20,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         bottomBar = findViewById(R.id.bottom_bar)
         replaceFragment(ScheduleFragment())
+        changeStatusBarColor("#2941DA")
+
         bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener{
             override fun onTabSelected(
                 lastIndex: Int,
@@ -42,6 +48,13 @@ class MainActivity : AppCompatActivity() {
 
     fun replaceFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.fragments, fragment).commit()
+    }
+    private fun changeStatusBarColor(color: String) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val window: Window = window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.statusBarColor = android.graphics.Color.parseColor(color)
+        }
     }
 
 }
