@@ -6,7 +6,6 @@ plugins {
 android {
     namespace = "com.onlylose.schedule"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "com.onlylose.schedule"
         minSdk = 24
@@ -36,13 +35,19 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.animation.core.android)
+    implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.runtime.android)
+    implementation(libs.androidx.ui.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation ("nl.joery.animatedbottombar:library:1.1.0")
 }

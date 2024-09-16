@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_schedule"
+        android:icon="@drawable/schedule"
+        android:title="@string/schedule">
+    </item>
+    <item
+        android:id="@+id/tab_marks"
+        android:icon="@drawable/marks"
+        android:title="@string/marks">
+    </item>
+    <item
+        android:id="@+id/tab_about"
+        android:icon="@drawable/about"
+        android:title="@string/about">
+    </item>
+    <item
+        android:id="@+id/tab_settings"
+        android:icon="@drawable/settings"
+        android:title="@string/settings">
+    </item>
+
+</menu>

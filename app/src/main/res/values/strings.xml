@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Schedule</string>
+    <string name="schedule">SCHEDULE</string>
+    <string name="about">ABOUT US</string>
+    <string name="settings">SETTINGS</string>
+    <string name="marks">MARKS</string>
 </resources>
