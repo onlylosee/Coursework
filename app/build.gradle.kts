@@ -1,11 +1,17 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
 
 android {
+
+}
+android {
     namespace = "com.onlylose.schedule"
     compileSdk = 34
+
     defaultConfig {
         applicationId = "com.onlylose.schedule"
         minSdk = 24
@@ -34,6 +40,7 @@ android {
     }
 }
 
+val version = "0.4.0"
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,9 +52,13 @@ dependencies {
     implementation(libs.androidx.material3.android)
     implementation(libs.androidx.runtime.android)
     implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.uiautomator)
+    implementation(libs.firebase.crashlytics.buildtools)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation ("nl.joery.animatedbottombar:library:1.1.0")
+
+    implementation("com.mohamedrejeb.ksoup:ksoup-html:$version")
 }
