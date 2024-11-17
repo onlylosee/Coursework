@@ -3,25 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/activMain"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragments"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar">
     </androidx.fragment.app.FragmentContainerView>
-
-
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:background="#FFF"
+        android:background="#FFFFFF"
         app:abb_tabColorSelected="#2941DA"
         app:abb_animationDuration="320"
         app:abb_indicatorColor="#2941DA"
@@ -35,5 +34,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

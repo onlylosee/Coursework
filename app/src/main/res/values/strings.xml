@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Schedule</string>
     <string name="schedule">SCHEDULE</string>
-    <string name="about">ABOUT US</string>
+    <string name="about">ABOUT ME</string>
     <string name="settings">SETTINGS</string>
     <string name="marks">MARKS</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="aboutme">MY CONTACTS</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

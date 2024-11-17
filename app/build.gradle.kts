@@ -1,13 +1,11 @@
 import com.android.build.api.dsl.Packaging
+import kotlin.coroutines.coroutineContext
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
 
-android {
-
-}
 android {
     namespace = "com.onlylose.schedule"
     compileSdk = 34
@@ -38,10 +36,22 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 val version = "0.4.0"
 dependencies {
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
+    implementation("com.squareup.moshi:moshi-kotlin:1.12.0")
+    implementation("com.squareup.moshi:moshi:1.12.0")
+    implementation("com.github.zcweng:switch-button:0.0.3@aar")
+    implementation(libs.okhttp)
+    implementation(libs.volley)
+    implementation(libs.gson)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -59,6 +69,4 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation ("nl.joery.animatedbottombar:library:1.1.0")
-
-    implementation("com.mohamedrejeb.ksoup:ksoup-html:$version")
 }
