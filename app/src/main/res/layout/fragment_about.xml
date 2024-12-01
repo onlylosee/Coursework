@@ -5,58 +5,64 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".AboutFragment">
-
     <TextView
-        android:id="@+id/toptext"
+        android:id="@+id/tvTopCont"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginHorizontal="24dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/aboutme"
+        android:layout_height="wrap_content"
+        android:text="Our contacts"
         android:gravity="center"
-        android:textSize="24dp"
-        android:fontFamily="@fonts/">
-    </TextView>
-    <Button
-        android:id="@+id/buttontg"
+        android:textSize="26sp"
+        android:fontFamily="@font/podkovaeb"
+        android:textColor="@color/blueOfficial"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/contBut1"/>
+
+    <ImageButton
+        android:id="@+id/contBut1"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_margin="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/toptext"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="sosa">
-
-    </Button>
-
-    <Button
-        android:id="@+id/buttonyt"
+        android:layout_height="80dp"
+        android:src="@drawable/tg"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/shape_for_contacts_buttons"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopCont" />
+    <ImageButton
+        android:id="@+id/contBut2"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_margin="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttontg"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="sosa">
+        android:layout_height="80dp"
+        android:src="@drawable/vk"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_for_contacts_buttons"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/contBut1" />
 
-    </Button>
-
-    <Button
-        android:id="@+id/buttongit"
+    <ImageButton
+        android:id="@+id/contBut3"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_margin="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonyt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="sosa">
+        android:layout_height="80dp"
+        android:src="@drawable/github"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_for_contacts_buttons"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/contBut2" />
 
-    </Button>
+    <ImageButton
+        android:id="@+id/contBut4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/mail"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_for_contacts_buttons"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/contBut3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

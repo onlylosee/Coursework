@@ -6,8 +6,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ScheduleFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parents"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/llDays"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatarAmgu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:src="@drawable/amgutransparent" />
+            <TextView
+                android:id="@+id/hightv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/podkovaeb"
+                android:text="Расписание группы "
+                android:textColor="@color/mainBlue"
+                android:textSize="18sp" />
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/llDays"
             android:layout_width="match_parent"
@@ -21,6 +47,8 @@
                 android:id="@+id/but1"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="20sp"
                 android:layout_marginHorizontal="8dp"
                 android:background="@drawable/shapebut"
                 android:text="ПН"/>
@@ -28,6 +56,8 @@
                 android:id="@+id/but2"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="20sp"
                 android:layout_marginHorizontal="8dp"
                 android:background="@drawable/shapebut"
                 android:text="ВТ"/>
@@ -35,6 +65,8 @@
                 android:id="@+id/but3"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="20sp"
                 android:layout_marginHorizontal="8dp"
                 android:background="@drawable/shapebut"
                 android:text="СР"/>
@@ -42,6 +74,8 @@
                 android:id="@+id/but4"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="20sp"
                 android:layout_marginHorizontal="8dp"
                 android:background="@drawable/shapebut"
                 android:text="ЧТ"/>
@@ -49,6 +83,8 @@
                 android:id="@+id/but5"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="20sp"
                 android:layout_marginHorizontal="8dp"
                 android:background="@drawable/shapebut"
                 android:text="ПТ"/>
@@ -56,6 +92,8 @@
                 android:id="@+id/but6"
                 android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="20sp"
                 android:layout_marginHorizontal="8dp"
                 android:background="@drawable/shapebut"
                 android:text="СБ"/>
@@ -73,6 +111,8 @@
                 android:id="@+id/butWeek1"
                 android:background="@drawable/shapebut"
                 android:textColor="@color/white"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="1 неделя"/>
@@ -80,18 +120,19 @@
                 android:id="@+id/tvCurrentWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/blueOfficial"
                 android:text="                                   "
                 android:layout_marginHorizontal="20dp"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/butWeek2"
                 android:textColor="@color/white"
+                android:fontFamily="@font/podkovaeb"
+                android:textSize="16sp"
                 android:background="@drawable/shapebut"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="2 неделя"/>
         </LinearLayout>
-
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -99,9 +140,49 @@
             android:layout_height="match_parent"
             android:layout_marginTop="190dp"
             android:foregroundGravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/llWeek"
+            android:background="@drawable/ppapwhite"
+            app:layout_constraintBottom_toBottomOf="@id/parents"
+            app:layout_constraintEnd_toEndOf="@id/parents"
+            app:layout_constraintStart_toStartOf="@id/parents"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/popUpBut"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="25dp"
+            android:background="@drawable/shapepopup"
+            android:text="Group"
+            android:fontFamily="@font/podkovaeb"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/textIf"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="190dp"
+            android:textSize="36sp"
+            android:maxLines="2"
+            android:textColor="@color/blueOfficial"
+            android:fontFamily="@font/podkovaeb"
+            android:background="@drawable/ppapwhite"
+            android:gravity="center"
+            android:foregroundGravity="center"
+            android:text="Выберите группу"
+            app:layout_constraintTop_toBottomOf="@id/llWeek"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menuRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_alignParentBottom="true"/>
+
         <include
             layout="@layout/list_item"
             android:id="@+id/list_item"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/h1"
+        android:title="ИС221" />
+    <item
+        android:id="@+id/h2"
+        android:title="ИС222" />
+    <item
+        android:id="@+id/h3"
+        android:title="ИС234" />
+    <item
+        android:id="@+id/h4"
+        android:title="Б221" />
+</menu>

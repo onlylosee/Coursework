@@ -16,5 +16,7 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#000000</color>
     <color name="colorPrimaryLight">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transpGray">#90000000</color>
 
 </resources>

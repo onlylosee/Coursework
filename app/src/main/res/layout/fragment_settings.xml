@@ -5,30 +5,144 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SettingsFragment">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="30dp"
-        android:layout_gravity="center">
-        <LinearLayout
+        android:layout_height="match_parent">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switchBut"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                app:sb_checked_color="@color/mainBlue"
-                android:layout_margin="10dp" />
-            <TextView
-                android:layout_width="wrap_content"
+            android:text="Основные настройки"
+            android:textSize="26sp"
+            android:fontFamily="@font/podkovaeb"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/llSett"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+            android:id="@+id/llSett"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:gravity="top">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Темная тема?"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:textSize="30sp"/>
+                android:gravity=""
+                android:layout_gravity="center">
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchBut"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    app:sb_checked_color="@color/mainBlue"
+
+                    android:layout_margin="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Темная тема?"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/switchBut"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchButNameOfLesson"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    app:sb_checked_color="@color/mainBlue"
+                    android:layout_margin="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ставить в название пары что-либо, если ее нет?"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:maxLines="3"
+                    app:layout_constraintStart_toEndOf="@+id/switchButNameOfLesson"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/willClose"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    app:sb_checked_color="@color/mainBlue"
+                    android:layout_margin="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Закрывать меню групп после выбора группы?"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:maxLines="3"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/willClose"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/mainGroupEt"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:maxLength="8"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:inputType="textCapCharacters"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Основная группа"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:textSize="26sp"
+                    app:layout_constraintStart_toEndOf="@+id/mainGroupEt"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <include
         layout="@layout/activity_main"
         android:id="@+id/activMain"

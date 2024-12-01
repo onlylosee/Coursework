@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <item android:state_pressed="true" tools:ignore="StateListReachable">
+        <shape>
+            <solid android:color="@color/strokeBlue"/>
+            <corners android:radius="25dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/blueOfficial"/>
+            <corners android:radius="25dp"/>
+        </shape>
+    </item>
+</selector>
